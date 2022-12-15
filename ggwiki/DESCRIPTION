@@ -1,8 +1,8 @@
 Package: ggwiki
 Version: 0.1
 Date: 2022-12-01
-Title: Test Package
-Description: This is a test package.
+Title: ggwiki
+Description: This is a custom theme for ggplot2 to implement Wikimedia foundation colours/font in plots.
 Author: Hamid
 Maintainer: Hamid <1@1.com>
 License: MIT + file LICENSE
