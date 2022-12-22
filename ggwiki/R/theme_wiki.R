@@ -45,22 +45,26 @@ theme_wiki <- function(){
       #text elements
       plot.title = element_text(             #title
         family = text_font,            #set font family
-      ),       #set color to Citizen teal
+        face = "bold",
+      ),
 
-      plot.subtitle = element_text(          #subtitle
-        family = text_font,            #font family
-      ),       #set color to true black
+      plot.subtitle = element_text(             #subtitle
+        family = text_font,            #set font family
+        face = "bold",
+      ),
+
+
 
       plot.caption = element_text(           #caption
         family = text_font,            #font family
       ),
 
       axis.title = element_text(             #axis titles
-        family = text_font,            #font family
-      ),       #set color to true black
+        family = text_font, face="bold",           #font family
+      ),
 
       axis.text = element_text(              #axis text
-      ),       #set color to true black
+      ),
 
       axis.text.x = element_text(            #margin for axis text
       ),
@@ -77,12 +81,17 @@ theme_wiki <- function(){
         family = text_font,
       ),
 
+      legend.position = "bottom",
 
 
       #since the legend often requires manual tweaking
       #based on plot content, don't define it here
     )
+
 }
+
+
+
 
 
 
