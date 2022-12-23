@@ -83,17 +83,12 @@ theme_wiki <- function(){
 
       legend.position = "bottom",
 
-
+#
       #since the legend often requires manual tweaking
       #based on plot content, don't define it here
     )
 
 }
-
-
-
-
-
 
 
 
