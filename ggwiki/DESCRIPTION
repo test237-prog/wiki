@@ -9,3 +9,4 @@ License: MIT + file LICENSE
 RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
+Depends: ggplot2

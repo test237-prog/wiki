@@ -29,7 +29,7 @@ theme_wiki <- function(){
   #font <- "Montserrat"   #assign font family up front
   text_font <- "Source Serif Pro"
 
-  theme_minimal() %+replace%    #replace elements we want to change
+  thm <- theme_minimal() %+replace%    #replace elements we want to change
 
     theme(
 
@@ -88,7 +88,43 @@ theme_wiki <- function(){
       #based on plot content, don't define it here
     )
 
+  class(thm) <- c("theme_wiki", class(thm))
+  thm
+
+
+
 }
+
+
+#' Adds wrapping on axis labels
+#'
+#' This creates wiki theme for ggplot2
+#' @export
+
+
+
+ggplot_add.theme_wiki <- function(object, plot, object_name) {
+  class(object) <- class(object)[-1]
+  #sapply(plot$layers, function(x) print(x$position))
+
+  #sapply(plot$layers, function(x) print(class(x$position)))
+
+
+  if(any(sapply(plot$layers, function(x) inherits(x$position, "TheDodge")))){
+
+
+    return(plot + object + theme(legend.position = "none") +  scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 8)))
+
+  }
+  else  plot + object + scale_x_discrete(labels = function(x) stringr::str_wrap(x, width = 8))
+
+
+}
+
+
+
+
+
 
 
 
