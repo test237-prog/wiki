@@ -54,7 +54,7 @@ theme_wiki <- function(){
       ),
       
       axis.text.x = element_text(            # Margin for x-axis text
-        family = text_font
+        family = text_font, size=13
       ),
       
       legend.text = element_text(            # Legend text
@@ -82,7 +82,7 @@ theme_wiki <- function(){
 #' @examples
 #' scale_x_wikic()
 
-scale_x_wikic <- function(width = 8, percent = FALSE, ...) {
+scale_x_wikic <- function(width = 12, percent = FALSE, ...) {
   if (percent) {
     ggplot2::scale_x_continuous(labels = function(x) paste0(x * 100, "%"), ...)
   } else {
@@ -96,7 +96,7 @@ scale_x_wikic <- function(width = 8, percent = FALSE, ...) {
 #' @examples
 #' scale_x_wikid()
 
-scale_x_wikid <- function(width = 8, percent = FALSE, ...) {
+scale_x_wikid <- function(width = 12, percent = FALSE, ...) {
   if (percent) {
     ggplot2::scale_x_discrete(labels = function(x) paste0(x * 100, "%"), ...)
   } else {
@@ -111,7 +111,7 @@ scale_x_wikid <- function(width = 8, percent = FALSE, ...) {
 #' scale_y_wikic()
 
 # Define custom scale_y_wrapc() function with default value for width
-scale_y_wikic <- function(width = 8, percent = FALSE, ...) {
+scale_y_wikic <- function(width = 12, percent = FALSE, ...) {
   if (percent) {
     ggplot2::scale_y_continuous(labels = function(y) paste0(y*100, "%"), ...)
   } else {
@@ -129,9 +129,6 @@ scale_y_wikic <- function(width = 8, percent = FALSE, ...) {
 
 
 # Define custom scale_y_wrapd() function with default value for width
-scale_y_wikid <- function(width = 8, ...) {
+scale_y_wikid <- function(width = 12, ...) {
   ggplot2::scale_y_discrete(labels = function(y) str_wrap(y, width = width), ...)
 }
-
-
-
