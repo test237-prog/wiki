@@ -99,4 +99,4 @@ The package has two predefined color palettes:
 
     main: A primary color palette consisting of 7 colors: "#0063BF", "#F0BC00", "#308557", "#5748B5", "#
 
-# For more details and examples of how to use these functions, please refer to the package documentation.
+ For more details and examples of how to use these functions, please refer to the package documentation.
