@@ -11,9 +11,21 @@ wiki_palettes(
   type = c("discrete", "continuous")
 )
 }
+\arguments{
+\item{name}{A character string indicating the name of the palette to use from the \code{wiki_colors} list.}
+
+\item{n}{An optional integer specifying the number of colors to use in the palette. If not specified, the length of the palette is used.}
+
+\item{all_palettes}{An optional list of color palettes. Defaults to the \code{wiki_colors} list.}
+
+\item{type}{A character string indicating the type of scale to create, either "discrete" or "continuous".}
+}
+\value{
+A vector of colors representing the palette.
+}
 \description{
-This creates scales to be used with ggplot2
+This function creates color palettes to be used with ggplot2
 }
 \examples{
-wiki_palettes()
+wiki_palettes("main", 4, all_palettes = wiki_colors, type = "discrete")
 }

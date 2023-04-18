@@ -2,13 +2,14 @@
 % Please edit documentation in R/theme_wiki.R
 \name{theme_wiki}
 \alias{theme_wiki}
-\title{Setting up wiki theme}
+\title{Creates a custom "wiki" theme for ggplot2}
 \usage{
-theme_wiki()
+theme_wiki(..., simple = FALSE)
 }
 \description{
-This creates wiki theme for ggplot2
+Creates a custom "wiki" theme for ggplot2
 }
 \examples{
+p <- ggplot(mtcars, aes(mpg, hp)) + geom_point() + theme_wiki()
 theme_wiki()
 }

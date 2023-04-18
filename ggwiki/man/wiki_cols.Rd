@@ -6,9 +6,17 @@
 \usage{
 wiki_cols(...)
 }
+\arguments{
+\item{...}{the name of the color palette to return, as a character vector}
+}
+\value{
+the specified color palette as a character vector
+}
 \description{
-This creates wiki color schemes
+This function returns a specified color palette from the list of wiki color palettes.
+If no palette is specified, it returns the entire list.
 }
 \examples{
-wiki_cols()
+wiki_cols() # returns the entire list of color palettes
+wiki_cols("main") # returns the "main" color palette
 }

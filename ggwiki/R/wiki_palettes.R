@@ -92,6 +92,6 @@ scale_fill_wiki_c = function(name) {
 }
 
 
-#Make sure that functions can be called for if 'color'/'colour' is used.
+#Make sure that functions can be called whether 'color'/'colour' is used.
 scale_color_wiki_d = scale_colour_wiki_d
 scale_color_wiki_c = scale_colour_wiki_c

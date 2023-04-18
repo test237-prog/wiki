@@ -6,9 +6,15 @@
 \usage{
 scale_colour_wiki_c(name)
 }
+\arguments{
+\item{name}{A character string indicating the name of the palette to use from the \code{wiki_colors} list.}
+}
+\value{
+A ggplot2 scale object for continuous color palettes.
+}
 \description{
-This creates scales to be used with ggplot2
+This function creates a ggplot2 scale for continuous color palettes.
 }
 \examples{
-scale_colour_wiki_c()
+scale_colour_wiki_c("main")
 }

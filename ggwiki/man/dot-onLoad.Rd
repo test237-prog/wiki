@@ -2,13 +2,14 @@
 % Please edit documentation in R/theme_wiki.R
 \name{.onLoad}
 \alias{.onLoad}
-\title{Setting up font}
+\title{Sets up the desired font for showtext package}
 \usage{
 .onLoad(libname, pkgname)
 }
 \description{
-Sets up Font
+Sets up the desired font for showtext package
 }
 \examples{
+.onLoad("mypkg")
 .onLoad()
 }

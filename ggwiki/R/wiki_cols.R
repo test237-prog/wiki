@@ -3,6 +3,8 @@ wiki_colors = list(
   # The main color palette
   main = c("#0063BF", "#F0BC00", "#308557", "#5748B5", "#049DFF", "#71D1B3", "#E9E7C4"),
   
+
+  
   # An alternative color palette
   #main = c("#EE8019", "#F0BC00", "#970302", "#5748B5",
   #         "#305D70", "#E679A6","#0E65C0", "#049DFF", "#E9E7C4", "#308557",
@@ -12,11 +14,9 @@ wiki_colors = list(
   #alt = c("#0063BF", "#dd3333", "#6b4ba1", "#6c7378",
   #       "#d5fdf4", "#00af89", "#14866d", "#fef6e7", "#fc3", "#ac6600")
   
-  # A contrast color palette
-  cont2 = c("#0c06f7", "#67B7D1"),
   
-  # Another contrast color palette (duplicate name, overwrites the previous one)
-  cont2 = c("#0c06f7", "#67B7D1")
+  # An contrast color palette 
+  contr = c("#0c06f7", "#67B7D1")
   
   # Other color palettes that are commented out
   #accent_blue = c("#eaf3ff", "#36c", "#2a4b8d"),
