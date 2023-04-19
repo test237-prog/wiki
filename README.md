@@ -19,7 +19,7 @@ command:
 
 devtools::install\_github(“your\_github\_username/wiki\_theme”)
 
-\##Features
+## Features
 
     Custom "wiki" theme for ggplot2
     Custom axis label functions for wrapped text
@@ -100,7 +100,7 @@ Here’s an example of how to use this function:
 
     print(plot)
 
-\##Custom Color Scales
+## Custom Color Scales
 
 This package includes functions to create custom ggplot2 color scales
 using the predefined color palettes. The following functions are
@@ -116,4 +116,4 @@ The package has two predefined color palettes:
 
     main: A primary color palette consisting of 7 colors: "#0063BF", "#F0BC00", "#308557", "#5748B5", "#
 
-# For more details and examples of how to use these functions, please refer to the package documentation.
+For more details and examples of how to use these functions, please refer to the package documentation.
