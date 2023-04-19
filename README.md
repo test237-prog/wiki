@@ -72,7 +72,7 @@ ggplot2 plot:
 
 # Adding labels to graphs
 
-# The add\_bar\_labels() function can be used to add labels to bar plots
+The add\_bar\_labels() function can be used to add labels to bar plots
 with various options:
 
     y_var: The name of the variable representing the y-axis values in your data (must be entered to generate the labels).
@@ -89,7 +89,7 @@ Here’s an example of how to use this function:
     print(plot)
 
 
-# The add\_line\_labels() function can be used to add labels to line
+The add\_line\_labels() function can be used to add labels to line
 graphs with various options.
 
      y_var: The name of the variable representing the y-axis values in your data (must be entered to generate the labels).  
