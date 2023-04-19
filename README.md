@@ -27,7 +27,7 @@ devtools::install\_github(“your\_github\_username/wiki\_theme”)
     Predefined color palettes
     Custom 'simplified' plot aesthetics which remove grid lines, axis lines, and labels.
 
-\#Usage
+\# Usage
 
 First, load the package:
 
@@ -52,7 +52,7 @@ ggplot2 plot:
 
     print(plot)
 
-\#To use simplified aesthetics include the parameter “simple = TRUE”:
+\ # To use simplified aesthetics include the parameter “simple = TRUE”:
 
     # Install the 'devtools' package if you don't have it
     library(ggplot2)
@@ -68,7 +68,7 @@ ggplot2 plot:
 
     print(plot)
 
-\##Adding labels to graphs
+\ ## Adding labels to graphs
 
 \#The add\_bar\_labels() function can be used to add labels to bar plots
 with various options:
@@ -101,7 +101,7 @@ Here’s an example of how to use this function:
     print(plot)
 
 \
-##Custom Color Scales
+## Custom Color Scales
 
 This package includes functions to create custom ggplot2 color scales
 using the predefined color palettes. The following functions are
