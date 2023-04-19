@@ -1,11 +1,11 @@
-## Wiki Theme for ggplot2
+# Wiki Theme for ggplot2
 
 This R package provides a custom “wiki” theme for ggplot2, along with
 additional functions for working with axis labels, bar labels, and more.
 It leverages the Google Font ‘Montserrat’ and customizes the look and
 feel of ggplot2 plots to make them visually appealing.
 
-## Installation
+# Installation
 
 You can install this package directly from GitHub using the following
 command:
@@ -15,11 +15,11 @@ command:
       install.packages("devtools")
     }
 
-# Install the ‘wiki\_theme’ package from GitHub
+## Install the ‘wiki\_theme’ package from GitHub
 
 devtools::install\_github(“your\_github\_username/wiki\_theme”)
 
-## Features
+# Features
 
     Custom "wiki" theme for ggplot2
     Custom axis label functions for wrapped text
@@ -52,7 +52,7 @@ ggplot2 plot:
 
     print(plot)
 
-\
+
 # To use simplified aesthetics include the parameter “simple = TRUE”:
 
     # Install the 'devtools' package if you don't have it
@@ -69,10 +69,10 @@ ggplot2 plot:
 
     print(plot)
 
-\ 
-## Adding labels to graphs
 
-\#The add\_bar\_labels() function can be used to add labels to bar plots
+# Adding labels to graphs
+
+# The add\_bar\_labels() function can be used to add labels to bar plots
 with various options:
 
     y_var: The name of the variable representing the y-axis values in your data (must be entered to generate the labels).
@@ -88,7 +88,7 @@ Here’s an example of how to use this function:
 
     print(plot)
 
-\
+
 # The add\_line\_labels() function can be used to add labels to line
 graphs with various options.
 
@@ -103,9 +103,8 @@ Here’s an example of how to use this function:
 
     print(plot)
 
-\
 
-## Custom Color Scales
+# Custom Color Scales
 
 This package includes functions to create custom ggplot2 color scales
 using the predefined color palettes. The following functions are
