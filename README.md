@@ -100,7 +100,8 @@ Here’s an example of how to use this function:
 
     print(plot)
 
-\##Custom Color Scales
+\
+##Custom Color Scales
 
 This package includes functions to create custom ggplot2 color scales
 using the predefined color palettes. The following functions are
