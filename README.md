@@ -19,7 +19,7 @@ command:
 
 devtools::install\_github(“your\_github\_username/wiki\_theme”)
 
-\##Features
+## Features
 
     Custom "wiki" theme for ggplot2
     Custom axis label functions for wrapped text
@@ -27,7 +27,7 @@ devtools::install\_github(“your\_github\_username/wiki\_theme”)
     Predefined color palettes
     Custom 'simplified' plot aesthetics which remove grid lines, axis lines, and labels.
 
-\# Usage
+# Usage
 
 First, load the package:
 
@@ -52,7 +52,8 @@ ggplot2 plot:
 
     print(plot)
 
-\ # To use simplified aesthetics include the parameter “simple = TRUE”:
+\
+# To use simplified aesthetics include the parameter “simple = TRUE”:
 
     # Install the 'devtools' package if you don't have it
     library(ggplot2)
@@ -68,7 +69,8 @@ ggplot2 plot:
 
     print(plot)
 
-\ ## Adding labels to graphs
+\ 
+## Adding labels to graphs
 
 \#The add\_bar\_labels() function can be used to add labels to bar plots
 with various options:
@@ -86,7 +88,8 @@ Here’s an example of how to use this function:
 
     print(plot)
 
-\#The add\_line\_labels() function can be used to add labels to line
+\
+# The add\_line\_labels() function can be used to add labels to line
 graphs with various options.
 
      y_var: The name of the variable representing the y-axis values in your data (must be entered to generate the labels).  
@@ -101,6 +104,7 @@ Here’s an example of how to use this function:
     print(plot)
 
 \
+
 ## Custom Color Scales
 
 This package includes functions to create custom ggplot2 color scales
