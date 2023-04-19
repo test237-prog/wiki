@@ -5,7 +5,7 @@ additional functions for working with axis labels, bar labels, and more.
 It leverages the Google Font ‘Montserrat’ and customizes the look and
 feel of ggplot2 plots to make them visually appealing.
 
-# Installation
+## Installation
 
 You can install this package directly from GitHub using the following
 command:
@@ -19,7 +19,7 @@ command:
 
 devtools::install\_github(“your\_github\_username/wiki\_theme”)
 
-# Features
+\##Features
 
     Custom "wiki" theme for ggplot2
     Custom axis label functions for wrapped text
@@ -27,7 +27,7 @@ devtools::install\_github(“your\_github\_username/wiki\_theme”)
     Predefined color palettes
     Custom 'simplified' plot aesthetics which remove grid lines, axis lines, and labels.
 
-# Usage
+\#Usage
 
 First, load the package:
 
@@ -68,7 +68,7 @@ ggplot2 plot:
 
     print(plot)
 
-# Adding labels to graphs
+\##Adding labels to graphs
 
 \#The add\_bar\_labels() function can be used to add labels to bar plots
 with various options:
@@ -100,20 +100,52 @@ Here’s an example of how to use this function:
 
     print(plot)
 
-# Custom Color Scales
+\##Custom Color Scales
 
 This package includes functions to create custom ggplot2 color scales
 using the predefined color palettes. The following functions are
 available:
 
     wiki_palettes(): Create color palettes to be used with ggplot2
-    scale_color_wiki_discrete(): Create a ggplot2 scale for discrete color palettes
-    scale_fill_wiki_discrete(): Create a ggplot2 scale for discrete fill palettes
-    scale_color_wiki_continuous(): Create a ggplot2 scale for continuous color palettes
-    scale_fill_wiki_continuous(): Create a ggplot2 scale for continuous fill palettes
+    color_wiki_discrete(): Create a ggplot2 scale for discrete color palettes
+    fill_wiki_discrete(): Create a ggplot2 scale for discrete fill palettes
+    color_wiki_continuous(): Create a ggplot2 scale for continuous color palettes
+    fill_wiki_continuous(): Create a ggplot2 scale for continuous fill palettes
 
-The package has two predefined color palettes:
+The package has three predefined color palettes:
 
-    main: A primary color palette consisting of 7 colors: "#0063BF", "#F0BC00", "#308557", "#5748B5", "#
+    main: A primary color palette consisting of 7 colors: "#0063BF", "#F0BC00", "#308557", "#5748B5", " 
+    contr: A gradient color palette consisting with the polar values set as: "#0c06f7", "#67B7D1",  providing a smooth transition between these contrasting shades.
+    dynamic_gradient: A gradient color palette that dynamically generates a set of shades with a smooth transition based on the number of factors, specifically designed for varying shades of blue.
 
-For more details and examples of how to use these functions, please refer to the package documentation.
+Here are some example of how to use these functions:
+
+    values <- c(10, 20, 30)
+    df <- data.frame(Factor = factors, Value = values)
+
+    p_main <- ggplot(df, aes(x = Factor, y = Value, fill = Factor)) +
+      geom_bar(stat = "identity") +
+      fill_wiki_discrete("main") +
+      theme_wiki()
+
+    print(p_main)
+
+    factors <- c("High School", "University", "PhD", "Postdoc")
+    values <- c(10, 20, 30, 40)
+    df <- data.frame(Factor = factors, Value = values)
+
+    p_dynamic_gradient <- ggplot(df, aes(x = Factor, y = Value, fill = Factor)) +
+      geom_bar(stat = "identity") +
+      fill_wiki_discrete("dynamic_gradient", n = num_factors) +
+      theme_wiki()
+
+    print(p_dynamic_gradient)
+
+    p_contr <- ggplot(df, aes(x = Factor, y = Value, fill = Factor)) +
+      geom_line() +
+      color_wiki_continuous("contr") +
+      theme_wiki()
+
+    print(p_contr)
+
+# For more details and examples of how to use these functions, please refer to the package documentation.
