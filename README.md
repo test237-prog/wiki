@@ -5,7 +5,7 @@ additional functions for working with axis labels, bar labels, and more.
 It leverages the Google Font ‘Montserrat’ and customizes the look and
 feel of ggplot2 plots to make them visually appealing.
 
-## Installation
+# Installation
 
 You can install this package directly from GitHub using the following
 command:
@@ -19,7 +19,7 @@ command:
 
 devtools::install\_github(“your\_github\_username/wiki\_theme”)
 
-## Features
+# Features
 
     Custom "wiki" theme for ggplot2
     Custom axis label functions for wrapped text
@@ -27,7 +27,7 @@ devtools::install\_github(“your\_github\_username/wiki\_theme”)
     Predefined color palettes
     Custom 'simplified' plot aesthetics which remove grid lines, axis lines, and labels.
 
-\#Usage
+# Usage
 
 First, load the package:
 
@@ -68,7 +68,7 @@ ggplot2 plot:
 
     print(plot)
 
-\##Adding labels to graphs
+# Adding labels to graphs
 
 \#The add\_bar\_labels() function can be used to add labels to bar plots
 with various options:
@@ -100,7 +100,7 @@ Here’s an example of how to use this function:
 
     print(plot)
 
-## Custom Color Scales
+# Custom Color Scales
 
 This package includes functions to create custom ggplot2 color scales
 using the predefined color palettes. The following functions are
