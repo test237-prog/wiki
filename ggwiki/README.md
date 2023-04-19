@@ -25,6 +25,7 @@ devtools::install\_github(“your\_github\_username/wiki\_theme”)
     Custom axis label functions for wrapped text
     Function to add percentage bar labels to bar plots
     Predefined color palettes
+    Custom 'simplified' plot aesthetics which remove grid lines, axis lines, and labels.
 
 \#Usage
 
@@ -48,6 +49,22 @@ ggplot2 plot:
     plot <- ggplot(data, aes(x = category, y = value)) +
       geom_bar(stat = "identity") +
       theme_wiki()
+
+    print(plot)
+
+\#To use simplified aesthetics include the parameter “simple = TRUE”:
+
+    # Install the 'devtools' package if you don't have it
+    library(ggplot2)
+
+    data <- data.frame(
+      category = c("A", "B", "C", "D"),
+      value = c(10, 20, 30, 40)
+    )
+
+    plot <- ggplot(data, aes(x = category, y = value)) +
+      geom_bar(stat = "identity", width = 0.66) +
+      theme_wiki(simple = TRUE)  + geom_hline(yintercept = 0, size = 0.10) #By default the x-axis line is removed. Add this geom to create the x-axis line.
 
     print(plot)
 
@@ -99,4 +116,4 @@ The package has two predefined color palettes:
 
     main: A primary color palette consisting of 7 colors: "#0063BF", "#F0BC00", "#308557", "#5748B5", "#
 
-For more details and examples of how to use these functions, please refer to the package documentation.
+# For more details and examples of how to use these functions, please refer to the package documentation.

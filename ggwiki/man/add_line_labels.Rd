@@ -11,5 +11,5 @@ Add labels to line graphs
 }
 \examples{
 p <- ggplot(mtcars, aes(gear, hp)) + geom_bar(stat="identity") + add_bar_labels("hp", percent = TRUE)
-add_line_labelss()
+add_line_labels()
 }

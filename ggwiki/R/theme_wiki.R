@@ -6,6 +6,8 @@
 
 .onLoad <- function(libname, pkgname){
   library(showtext)
+  library(grDevices)
+  library(RColorBrewer)
   ## Load Google fonts (https://fonts.google.com/)
   font_add_google("Montserrat", "montserrat")
   showtext_auto()
@@ -102,7 +104,7 @@ theme_wiki <- function(..., simple = FALSE){
           family = text_font
         ),
         
-        legend.position = "bottom",            # Legend position
+        legend.position = "none",            # Legend position
        
         
       )
@@ -156,7 +158,7 @@ theme_wiki <- function(..., simple = FALSE){
           family = text_font
         ),
         
-        legend.position = "bottom",             # Legend position
+        legend.position = "none",             # Legend position
        
         
       ) 

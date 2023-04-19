@@ -19,4 +19,5 @@ If no palette is specified, it returns the entire list.
 \examples{
 wiki_cols() # returns the entire list of color palettes
 wiki_cols("main") # returns the "main" color palette
+
 }
