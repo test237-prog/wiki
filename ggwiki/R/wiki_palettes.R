@@ -13,7 +13,7 @@
 wiki_palettes = function(name, n, all_palettes = wiki_colors, type = c("discrete", "continuous")) {
   # Get the color palette specified by `name`.
   palette = all_palettes[[name]]
-  
+
   # Check if the palette is a function (e.g., dynamic_gradient)
   if (is.function(palette)) {
     if (is.null(n)) {
@@ -26,14 +26,14 @@ wiki_palettes = function(name, n, all_palettes = wiki_colors, type = c("discrete
       n = length(palette)
     }
   }
-  
+
   # Choose either a discrete or continuous color scale based on `type`.
   type = match.arg(type)
   out = switch(type,
                continuous = grDevices::colorRampPalette(palette)(n),
                discrete = palette[1:min(n, length(palette))]  # Modify this line
   )
-  
+
   # Set the name and class of the output vector.
   structure(out, name = name, class = "palette")
 }
@@ -96,10 +96,18 @@ fill_wiki_continuous= function(name, n = NULL) {
                                                         type = "continuous"))
 }
 
-
 #make canadian/american spelling of the function interchangeable
-color_wiki_discrete <- colour_wiki_discrete
-colour_wiki_discrete <- color_wiki_discrete
 
-color_wiki_continuous <- colour_wiki_continuous
-colour_wiki_continuous <- color_wiki_continuous
+
+#' Color_wiki_continuous
+#' @export
+color_wiki_continuous <- function(name, n = NULL) {
+  colour_wiki_continuous(name, n = n)
+}
+
+
+#' Color_wiki_discrete
+#' @export
+color_wiki_discrete <- function(name, n = NULL) {
+  colour_wiki_discrete(name, n = n)
+}

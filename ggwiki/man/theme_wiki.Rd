@@ -4,7 +4,7 @@
 \alias{theme_wiki}
 \title{Creates a custom "wiki" theme for ggplot2}
 \usage{
-theme_wiki(..., simple = FALSE)
+theme_wiki(..., simple = FALSE, legend = "none")
 }
 \description{
 Creates a custom "wiki" theme for ggplot2
