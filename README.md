@@ -2,7 +2,7 @@
 
 This R package provides a custom “wiki” theme for ggplot2, along with
 additional functions for working with axis labels, bar labels, and more.
-The purpose of the package, in addition to making R visualizations visually appealing, is to 
+In addition to creating visually appealing visualizations, the purpose of this package is to 
 help standardize Wikimedia data visualization aesthetics such as fonts and colors.
 
 ## Installation
