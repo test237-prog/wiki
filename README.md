@@ -19,7 +19,7 @@ command:
 
 devtools::install\_github(“your\_github\_username/wiki\_theme”)
 
-\##Features
+## Features
 
     Custom "wiki" theme for ggplot2
     Custom axis label functions for wrapped text
@@ -28,7 +28,7 @@ devtools::install\_github(“your\_github\_username/wiki\_theme”)
     Custom 'simplified' plot aesthetics which remove grid lines, axis lines, and labels.
     Default color fill and line color palette is wiki blue: "#0063BF".
 
-\#Usage
+# Usage
 
 First, load the package:
 
@@ -69,7 +69,7 @@ ggplot2 plot:
 
     print(plot)
 
-\##Adding labels to graphs
+## Adding labels to graphs
 
 \#The add\_bar\_labels() function can be used to add labels to bar plots
 with various options:
@@ -110,7 +110,7 @@ Here’s an example of how to use this function:
     ggplot(df,aes(x=year,y=score))+
       geom_line(aes(color = winner))+geom_point()+ theme_wiki()+labs(title = 'Basic line graph')   + add_line_labels(score)
 
-\##Wrapping and axis functions.
+## Text Wrapping and axis functions.
 
 \#The functions x\_wrap\_discrete(), y\_wrap\_discrete(),
 x\_wrap\_cont(), y\_wrap\_cont() will wrap text labels on the each
@@ -132,7 +132,7 @@ Here’s an example:
       labs(title = "Basic Barplot") + theme_wiki()+
       add_bar_labels('value', percent  = TRUE) + x_wrap_discrete(width = 12) +fill_wiki_discrete("main")
 
-\##Custom Color Scales
+## Custom Color Scales
 
 This package includes functions to create custom ggplot2 color scales
 using the predefined color palettes. The following functions are
@@ -206,4 +206,4 @@ An example of a plot with a continuous scale:
 
     print(b) 
 
-# For more details and examples of how to use these functions, please refer to the package documentation.
+For more details and examples of how to use these functions, please refer to the package documentation.
