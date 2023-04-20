@@ -97,8 +97,9 @@ fill_wiki_continuous= function(name, n = NULL) {
 }
 
 
-# Alias for colour_wiki_discrete
+#make canadian/american spelling of the function interchangeable
 color_wiki_discrete <- colour_wiki_discrete
+colour_wiki_discrete <- color_wiki_discrete
 
-# Alias for colour_wiki_continuous
 color_wiki_continuous <- colour_wiki_continuous
+colour_wiki_continuous <- color_wiki_continuous
