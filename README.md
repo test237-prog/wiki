@@ -115,7 +115,7 @@ Here’s an example of how to use this function:
 ## Text Wrapping and axis functions.
 
 The functions x\_wrap\_discrete(), y\_wrap\_discrete(),
-x\_wrap\_cont(), y\_wrap\_cont() will wrap text labels oneach
+x\_wrap\_cont(), y\_wrap\_cont() will wrap text labels on each
 respective axis. Additional parameters such as width, and percent can be
 passed to these functions where width will define the maximum text
 before wrapping and percent will add ‘%’ to the number (best used for
