@@ -28,11 +28,8 @@
 #' .onDetach()
 
 .onDetach <- function(libname) {
-  
-  ggplot2::update_geom_defaults("line", list(color = ggplot2::scale_colour_continuous_identity()$palette(1)))
-  ggplot2::update_geom_defaults("bar", list(fill = ggplot2::scale_fill_continuous_identity()$palette(1)))
+  ggplot2::theme_set(ggplot2::theme_gray())
 }
-
 
 
 #' Creates a custom "wiki" theme for ggplot2
