@@ -15,9 +15,9 @@ command:
       install.packages("devtools")
     }
 
-# Install the ‘wiki\_theme’ package from GitHub
+# Install the ‘ggwiki’ package from GitHub
 
-devtools::install\_github(“your\_github\_username/wiki\_theme”)
+devtools::install\_github(“your\_github\_username/ggwiki”)
 
 ## Features
 
@@ -114,8 +114,8 @@ Here’s an example of how to use this function:
 
 ## Text Wrapping and axis functions.
 
-#The functions x\_wrap\_discrete(), y\_wrap\_discrete(),
-x\_wrap\_cont(), y\_wrap\_cont() will wrap text labels on the each
+The functions x\_wrap\_discrete(), y\_wrap\_discrete(),
+x\_wrap\_cont(), y\_wrap\_cont() will wrap text labels oneach
 respective axis. Additional parameters such as width, and percent can be
 passed to these functions where width will define the maximum text
 before wrapping and percent will add ‘%’ to the number (best used for
