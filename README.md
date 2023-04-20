@@ -2,8 +2,8 @@
 
 This R package provides a custom “wiki” theme for ggplot2, along with
 additional functions for working with axis labels, bar labels, and more.
-It leverages the Google Font ‘Montserrat’ and customizes the look and
-feel of ggplot2 plots to make them visually appealing.
+The purpose of the package, in addition to making R visualizations visually appealing, is to 
+help standardize Wikimedia data visualization aesthetics such as fonts and colors.
 
 ## Installation
 
