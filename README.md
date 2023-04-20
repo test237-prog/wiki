@@ -68,6 +68,8 @@ To use simplified aesthetics include the parameter “simple = TRUE”:
       theme_wiki(simple = TRUE)  + geom_hline(yintercept = 0, size = 0.10) #By default the x-axis line is removed. Add this geom to create the x-axis line.
 
     print(plot)
+    
+Note that the horizontal x-axis line does not generate when using creating the simplified plot. Another geom can be used to re-create the x-axis.
 
 ## Adding labels to graphs
 
