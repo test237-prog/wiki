@@ -53,7 +53,7 @@ ggplot2 plot:
 
     print(plot)
 
-# To use simplified aesthetics include the parameter “simple = TRUE”:
+To use simplified aesthetics include the parameter “simple = TRUE”:
 
     # Install the 'devtools' package if you don't have it
     library(ggplot2)
