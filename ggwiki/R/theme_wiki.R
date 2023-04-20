@@ -292,8 +292,8 @@ add_line_labels <- function(y_var, percent = FALSE) {
 #' Add labels to stacked bargraphs
 #' @export
 #' @examples
-#' p <- ggplot(mtcars, aes(gear, hp)) + geom_bar(stat="identity") + add_bar_labels("hp", percent = TRUE)
-#' add_stacked_bar_labels
+#' p <- ggplot(mtcars, aes(gear, hp)) + geom_bar(stat="identity") + add_stacked_bar_labels(percent = TRUE)
+#' add_stacked_bar_labels()
 
 add_stacked_bar_labels <- function(y_var) {
   geom_text(
