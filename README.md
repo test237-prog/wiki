@@ -73,7 +73,7 @@ Note that the horizontal x-axis line does not generate when using creating the s
 
 ## Adding labels to graphs
 
-\#The add\_bar\_labels() function can be used to add labels to bar plots
+The add\_bar\_labels() function can be used to add labels to bar plots
 with various options:
 
     y_var: The name of the variable representing the y-axis values in your data (must be entered to generate the labels).
