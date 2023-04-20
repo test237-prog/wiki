@@ -78,7 +78,7 @@ with various options:
 
     y_var: The name of the variable representing the y-axis values in your data (must be entered to generate the labels).
     percent: A logical value. If set to TRUE, a percentage sign will be added next to the existing label. Default is FALSE.
-    proportion: A logical value. If set to TRUE, the label will be replaced with the percentage proportion of the value relative to the sum of all values. Default is FALSE. (experimenta)
+    proportion: A logical value. If set to TRUE, the label will be replaced with the percentage proportion of the value relative to the sum of all values. Default is FALSE. (This feature is experimental).
 
 Here’s an example of how to use this function:
 
@@ -148,7 +148,7 @@ available:
 
 The package has three predefined color palettes:
 
-    main: A primary color palette consisting of 7 colors: "#0063BF", "#F0BC00", "#308557", "#5748B5", " 
+    main: A primary color palette consisting of 7 colors: "#0063BF", "#F0BC00", "#308557", "#5748B5" 
     contr: A gradient color palette consisting with the polar values set as: "#0c06f7", "#67B7D1",  providing a smooth transition between these contrasting shades.
     dynamic_gradient: A gradient color palette that dynamically generates a set of shades with a smooth transition based on the number of factors, specifically designed for varying shades of blue.
 
@@ -201,10 +201,10 @@ An example of a plot with a continuous scale:
 
     # Convert cyl as a grouping variable
     df$cyl <- as.factor(df$cyl)
-    b <- ggplot(df, aes(x = wt, y = mpg)) + geom_point(aes(color = mpg), size = 3) +
+    scatter_plot <- ggplot(df, aes(x = wt, y = mpg)) + geom_point(aes(color = mpg), size = 3) +
       color_wiki_continuous("contr") +
       labs(title = "Scatter plot with continuous data") + theme_wiki() 
 
-    print(b) 
+    print(scatter_plot) 
 
 For more details and examples of how to use these functions, please refer to the package documentation.
