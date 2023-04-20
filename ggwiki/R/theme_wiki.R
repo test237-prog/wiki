@@ -28,7 +28,9 @@
 #' .onDetach()
 
 .onDetach <- function(libname) {
-  ggplot2::theme_set(ggplot2::theme_gray())
+ggplot2::theme_set(ggplot2::theme_gray())
+ggplot2::update_geom_defaults("bar", list(fill = ggplot2::scale_fill_hue()$palette(1)))
+
 }
 
 
