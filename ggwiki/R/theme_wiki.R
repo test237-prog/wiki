@@ -28,9 +28,9 @@
 #' .onDetach()
 
 .onDetach <- function(libname) {
-  ggplot2::theme_set(ggplot2::theme_gray())
-  ggplot2::update_geom_defaults("bar", list(fill = ggplot2::scale_fill_hue()$palette(1)))
-  
+ggplot2::theme_set(ggplot2::theme_gray())
+ggplot2::update_geom_defaults("bar", list(fill = ggplot2::scale_fill_hue()$palette(1)))
+
 }
 
 
@@ -40,7 +40,7 @@
 #' p <- ggplot(mtcars, aes(mpg, hp)) + geom_point() + theme_wiki()
 #' theme_wiki()
 
-theme_wiki <- function(..., simple = FALSE, legend = "none"){
+theme_wiki <- function(..., simple = FALSE){
   # Assign font family up front
   text_font <- "montserrat"
   
@@ -105,7 +105,7 @@ theme_wiki <- function(..., simple = FALSE, legend = "none"){
           family = text_font
         ),
         
-        legend.position = legend,        # Legend position
+        legend.position = "none",            # Legend position
        
         
       )
@@ -159,7 +159,7 @@ theme_wiki <- function(..., simple = FALSE, legend = "none"){
           family = text_font
         ),
         
-        legend.position = legend,         # Legend position
+        legend.position = "none",             # Legend position
        
         
       ) 
@@ -177,7 +177,7 @@ theme_wiki <- function(..., simple = FALSE, legend = "none"){
 #' p <- ggplot(mtcars, aes(gear, hp)) + geom_bar(stat="identity") + add_bar_labels("hp", percent = TRUE)
 #' add_bar_labels()
 
-add_bar_labels <- function(y_var, percent = FALSE, proportion = FALSE, limit = 1) {
+add_bar_labels <- function(y_var, percent = FALSE, proportion = FALSE) {
   geom_text(
     aes(
       label = if (proportion) {
@@ -185,19 +185,20 @@ add_bar_labels <- function(y_var, percent = FALSE, proportion = FALSE, limit = 1
       } else {
         paste0(!!rlang::sym(y_var), if (percent) "%" else "")
       },
-      y = !!rlang::sym(y_var),
-    #  color = ifelse(!!rlang::sym(y_var) < limit, 'black', 'white'),
-      vjust = ifelse(!!rlang::sym(y_var) < limit, -0.5, 1.5) # Adjust vjust value based on the limit
+      y = ifelse(
+        (!!rlang::sym(y_var) / sum(!!rlang::sym(y_var))) > 0.05,
+        !!rlang::sym(y_var) - (!!rlang::sym(y_var) * 0.02),
+        !!rlang::sym(y_var) + (!!rlang::sym(y_var) * 0.02)
+      )
     ),
     stat = 'identity',
     position = "identity",
     family = "montserrat",
+    color = 'black',
     size = 3.5,
-    color = ifelse(data1$value < limit, 'black', 'white'), # Move color outside of aes()
-    
+    vjust = -1.6
   )
 }
-
 
 
 
@@ -287,23 +288,4 @@ add_line_labels <- function(y_var, percent = FALSE) {
     vjust = -0.5
   )
 }
-
-
-#' Add labels to stacked bargraphs
-#' @export
-#' @examples
-#' p <- ggplot(mtcars, aes(gear, hp)) + geom_bar(stat="identity") + add_stacked_bar_labels(percent = TRUE)
-#' add_stacked_bar_labels()
-
-add_stacked_bar_labels <- function(y_var) {
-  geom_text(
-    aes_string(y = y_var, label = y_var),
-    stat = "identity",
-    position = position_stack(vjust = 0.5),
-    family = "montserrat",
-    color = 'white',
-    size = 3.5
-  )
-}
-
 
