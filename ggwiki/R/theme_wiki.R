@@ -8,6 +8,8 @@
   library(showtext)
   library(grDevices)
   library(RColorBrewer)
+  library(stringr)
+  library(ggrepel)
   ## Load Google fonts (https://fonts.google.com/)
   font_add_google("Montserrat", "montserrat")
   showtext_auto()
@@ -19,7 +21,7 @@
 
 
 
-#' Resets the settings when the package is detached
+#' Resets the settings when the package is detached, experimental.
 #' @export
 #' @examples
 #' .onDetach("mypkg")
@@ -195,7 +197,7 @@ add_bar_labels <- function(y_var, percent = FALSE, proportion = FALSE) {
     family = "montserrat",
     color = 'black',
     size = 3.5,
-    vjust = -1.7
+    vjust = -1.6
   )
 }
 

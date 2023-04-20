@@ -14,8 +14,6 @@ wiki_palettes = function(name, n, all_palettes = wiki_colors, type = c("discrete
   # Get the color palette specified by `name`.
   palette = all_palettes[[name]]
   
-  
-  
   # Check if the palette is a function (e.g., dynamic_gradient)
   if (is.function(palette)) {
     if (is.null(n)) {
@@ -29,16 +27,11 @@ wiki_palettes = function(name, n, all_palettes = wiki_colors, type = c("discrete
     }
   }
   
-  # If `n` is not specified, use the length of the palette.
-  if (missing(n)) {
-    n = length(palette)
-  }
-  
   # Choose either a discrete or continuous color scale based on `type`.
   type = match.arg(type)
   out = switch(type,
                continuous = grDevices::colorRampPalette(palette)(n),
-               discrete = palette[1:n]
+               discrete = palette[1:min(n, length(palette))]  # Modify this line
   )
   
   # Set the name and class of the output vector.
@@ -55,10 +48,10 @@ wiki_palettes = function(name, n, all_palettes = wiki_colors, type = c("discrete
 #' @examples
 #' color_wiki_discrete()
 
-colour_wiki_discrete = function(name) {
-  ggplot2::scale_colour_manual(values = wiki_palettes(name,
-                                                      type = "discrete"))
+colour_wiki_discrete = function(name, n = NULL) {
+  ggplot2::scale_colour_manual(values = wiki_palettes(name, n, type = "discrete"))  # Pass the n argument to the wiki_palettes function
 }
+
 
 
 #' Setting scale functions
@@ -69,12 +62,9 @@ colour_wiki_discrete = function(name) {
 #' @return A ggplot2 scale object for discrete fill palettes.
 #' @examples
 #' fill_wiki_discrete()
-
-fill_wiki_discrete = function(name, n = NULL) {
-  ggplot2::scale_fill_manual(values = wiki_palettes(name, n = n, type = "discrete"))
-}
-
-
+  fill_wiki_discrete = function(name, n = NULL) {
+    ggplot2::scale_fill_manual(values = wiki_palettes(name, n = n, type = "discrete"))
+  }
 
 #' Setting scale functions
 #'
@@ -85,8 +75,8 @@ fill_wiki_discrete = function(name, n = NULL) {
 #' @examples
 #' colour_wiki_continuous()
 
-colour_wiki_continuous= function(name) {
-  ggplot2::scale_colour_gradientn(colours = wiki_palettes(name = name,
+colour_wiki_continuous= function(name, n = NULL) {
+  ggplot2::scale_colour_gradientn(colours = wiki_palettes(name = name, n = n,
                                                           type = "continuous"))
 }
 
@@ -101,8 +91,8 @@ colour_wiki_continuous= function(name) {
 #' fill_wiki_continuous()
 
 
-fill_wiki_continuous= function(name) {
-  ggplot2::scale_fill_gradientn(colours = wiki_palettes(name = name,
+fill_wiki_continuous= function(name, n = NULL) {
+  ggplot2::scale_fill_gradientn(colours = wiki_palettes(name = name, n = n,
                                                         type = "continuous"))
 }
 
