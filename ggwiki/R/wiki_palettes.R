@@ -96,6 +96,7 @@ fill_wiki_continuous= function(name, n = NULL) {
                                                         type = "continuous"))
 }
 
+
 #make canadian/american spelling of the function interchangeable
 color_wiki_discrete <- colour_wiki_discrete
 colour_wiki_discrete <- color_wiki_discrete
