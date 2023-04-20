@@ -94,7 +94,7 @@ Here’s an example of how to use this function:
 
     print(plot)
 
-\#The add\_line\_labels() function can be used to add labels to line
+The add\_line\_labels() function can be used to add labels to line
 graphs with various options.
 
      y_var: The name of the variable representing the y-axis values in your data (must be entered to generate the labels).  
@@ -114,7 +114,7 @@ Here’s an example of how to use this function:
 
 ## Text Wrapping and axis functions.
 
-\#The functions x\_wrap\_discrete(), y\_wrap\_discrete(),
+#The functions x\_wrap\_discrete(), y\_wrap\_discrete(),
 x\_wrap\_cont(), y\_wrap\_cont() will wrap text labels on the each
 respective axis. Additional parameters such as width, and percent can be
 passed to these functions where width will define the maximum text
@@ -204,7 +204,6 @@ An example of a plot with a continuous scale:
     b <- ggplot(df, aes(x = wt, y = mpg)) + geom_point(aes(color = mpg), size = 3) +
       color_wiki_continuous("contr") +
       labs(title = "Scatter plot with continuous data") + theme_wiki() 
-
 
     print(b) 
 
