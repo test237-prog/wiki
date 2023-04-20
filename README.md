@@ -69,7 +69,9 @@ To use simplified aesthetics include the parameter “simple = TRUE”:
 
     print(plot)
     
-Note that the horizontal x-axis line does not generate when using creating the simplified plot. Another geom can be used to re-create the x-axis.
+Note that the horizontal x-axis line does not display when using creating the simplified plot. Another geom can be used to re-create the x-axis.
+
+
 
 ## Adding labels to graphs
 
@@ -78,7 +80,9 @@ with various options:
 
     y_var: The name of the variable representing the y-axis values in your data (must be entered to generate the labels).
     percent: A logical value. If set to TRUE, a percentage sign will be added next to the existing label. Default is FALSE.
-    proportion: A logical value. If set to TRUE, the label will be replaced with the percentage proportion of the value relative to the sum of all values. Default is FALSE. (This feature is experimental).
+    proportion: A logical value. If set to TRUE, the label will be replaced with the percentage proportion of the value relative to the sum of all values.
+    limit: a numerical value.  It will designate the y-value which will determine if the bar label should be above the bar or inside the bar.  This can be used to help ensure bar labels that don't fit inside a bar will be placed above.  
+    Default is FALSE. (This feature is experimental).
 
 Here’s an example of how to use this function:
 
