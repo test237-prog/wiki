@@ -4,7 +4,7 @@
 \alias{fill_wiki_continuous}
 \title{Setting scale functions}
 \usage{
-fill_wiki_continuous(name)
+fill_wiki_continuous(name, n = NULL)
 }
 \arguments{
 \item{name}{A character string indicating the name of the palette to use from the \code{wiki_colors} list.}

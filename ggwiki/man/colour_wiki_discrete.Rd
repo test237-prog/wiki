@@ -4,7 +4,7 @@
 \alias{colour_wiki_discrete}
 \title{Setting scale functions}
 \usage{
-colour_wiki_discrete(name)
+colour_wiki_discrete(name, n = NULL)
 }
 \arguments{
 \item{name}{A character string indicating the name of the palette to use from the \code{wiki_colors} list.}

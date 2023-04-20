@@ -2,12 +2,12 @@
 % Please edit documentation in R/theme_wiki.R
 \name{.onDetach}
 \alias{.onDetach}
-\title{Resets the settings when the package is detached}
+\title{Resets the settings when the package is detached, experimental.}
 \usage{
 .onDetach(libname)
 }
 \description{
-Resets the settings when the package is detached
+Resets the settings when the package is detached, experimental.
 }
 \examples{
 .onDetach("mypkg")
