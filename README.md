@@ -120,6 +120,22 @@ Here’s an example of how to use this function:
     ggplot(df,aes(x=year,y=score))+
       geom_line(aes(color = winner))+geom_point()+ theme_wiki()+labs(title = 'Basic line graph')   + add_line_labels(score)
 
+The add\_stacked\_bar\_labels() function can be used to add labels to stacked bar graphs (experimental).
+
+Here's an example of how to use this function:
+    
+    # create a dataset
+    specie <- c(rep("sorgho" , 3) , rep("poacee" , 3) , rep("banana" , 3) , rep("triticum" , 3) )
+    condition <- rep(c("normal" , "stress" , "Nitrogen") , 4)
+    value <- abs(rnorm(12 , 0 , 15))
+    data <- data.frame(specie,condition,value)
+
+    # Stacked
+    ggplot(data, aes(fill=condition, y=value, x=specie)) + 
+      geom_bar(position="stack", stat="identity", width = 0.66)  + add_stacked_bar_labels('value') +theme_wiki(legend = 'right')
+
+
+
 ## Text Wrapping and axis functions.
 
 The functions x\_wrap\_discrete(), y\_wrap\_discrete(),
@@ -214,5 +230,11 @@ An example of a plot with a continuous scale:
       labs(title = "Scatter plot with continuous data") + theme_wiki() 
 
     print(scatter_plot) 
+
+# Miscellaneous
+
+Recommended bar width is 0.66 so that a bar is about twice the size of the space between them. 
+       
+    geom_bar(stat = 'identity', width = 0.66)
 
 For more details and examples of how to use these functions, please refer to the package documentation.
