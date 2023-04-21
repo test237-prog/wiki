@@ -52,6 +52,8 @@ ggplot2 plot:
       theme_wiki()
 
     print(plot)
+    
+Adding the parameter 'legend' in the theme_wiki() function will also allow the user to specify the position of the legend.  A best practice would be to add the legend to the right of a stacked bar graph so that the legend colors are aligned with the bar colors.  The default value is none but it can be changed to 'bottom', 'right', 'left', etc.  See ggplot2 documentation for more information on legend positioning.
 
 To use simplified aesthetics include the parameter “simple = TRUE”:
 
@@ -68,7 +70,9 @@ To use simplified aesthetics include the parameter “simple = TRUE”:
       theme_wiki(simple = TRUE)  + geom_hline(yintercept = 0, size = 0.10) #By default the x-axis line is removed. Add this geom to create the x-axis line.
 
     print(plot)
-    
+
+
+
 Note that the horizontal x-axis line does not display when using creating the simplified plot. Another geom can be used to re-create the x-axis.
 
 
